@@ -17,6 +17,7 @@ interface CardProps {
     correctAnswer?: CardAnswer;
     handleAnswerClick?: (isAnswerCorrect: boolean, isSame?: boolean) => void;
     isLeftCard: boolean;
+    isPreLoadCard?: boolean;
     
 }
 
@@ -159,8 +160,11 @@ function Card(props: CardProps) {
         <Flex
   justifyContent="center"
   width={isMobile ? '100vw' :"50vw"}
-  height={ isMobile ? "50vh" :'auto'}
-  position="relative"
+  height={isMobile ? "50vh" :'auto'}
+  position={props?.isPreLoadCard ? 'absolute' : "relative"}
+  opacity={props?.isPreLoadCard ? 0 : 1}
+  zIndex={props?.isPreLoadCard ? -1 : 'auto'}
+  
 >
   <div
     style={{

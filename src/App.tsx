@@ -32,6 +32,7 @@ const initCards : CardType[] = jsonData
   const [allCards, setAllCards] = useState<CardType[]>([]);
   const [leftCard,setLeftCard] = useState<CardType | undefined>();
   const [rightCard,setRightCard] = useState<CardType | undefined>();
+  const [preLoadNextCard,setPreLoadNextCard] = useState<CardType | undefined>();
   const [gameStatus, setGameStatus] = useState(GameStatus.VS);
   const [currentScreenToDisplay, setCurrentScreenToDisplay] = useState<Screens>(Screens.GAME)
   const isMobile = useMobileDetection();
@@ -43,6 +44,7 @@ const initCards : CardType[] = jsonData
   useEffect(() => {
     setLeftCard(allCards[streak]);
     setRightCard(allCards[streak + 1]);
+    setPreLoadNextCard(allCards[streak + 2])
   }, [streak, allCards]);
 
   function shuffleArray<T>(array: T[]): T[] {
@@ -72,8 +74,6 @@ const initCards : CardType[] = jsonData
   }
 
   const handleAnswerClick = (isAnswerCorrect: boolean, isSame?: boolean) => {
-
-
     if(isSame){
       setGameStatus(GameStatus.SAME);
       setTimeout(() => {
@@ -96,6 +96,8 @@ const initCards : CardType[] = jsonData
       }, 1500);
     }
   }
+
+  
 
   const renderCardHolder = () => {
       let correctAnswer = CardAnswer.AFTER;
@@ -120,6 +122,8 @@ const initCards : CardType[] = jsonData
         <MidCircle status={gameStatus}/>
         {!!rightCard && 
         <Card isLeftCard={false} card={rightCard} correctAnswer={correctAnswer} handleAnswerClick={handleAnswerClick}/>}
+        {!!preLoadNextCard &&
+         <Card isLeftCard={false} card={preLoadNextCard} isPreLoadCard={true}/>}
       </Flex>
     )
   }
