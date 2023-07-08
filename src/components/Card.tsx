@@ -159,7 +159,7 @@ function Card(props: CardProps) {
         <Flex
   justifyContent="center"
   width={isMobile ? '100vw' :"50vw"}
-  height={ isMobile ? "100vmin" :'auto'}
+  height={ isMobile ? "50vh" :'auto'}
   position="relative"
 >
   <div

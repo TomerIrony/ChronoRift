@@ -77,13 +77,13 @@
     "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg"
   },
   {
-    "title": "Nidalee - New Champion",
+    "title": "New Champion - Nidalee",
     "patch": "V1.0.0.63",
     "date": "2009-12-17",
     "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nidalee_0.jpg"
   },
   {
-    "title": "Poppy - New Champion",
+    "title": "New Champion - Poppy",
     "patch": "V1.0.0.70",
     "date": "2010-01-13",
     "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg"
@@ -93,5 +93,168 @@
     "patch": "V1.0.0.70",
     "date": "2010-01-13",
     "image":"https://runetarium.com/wp-content/uploads/2022/03/runeterra-ixtal-06.webp"
+  },
+  {
+    "title": "New Champion - Mordekaiser",
+    "patch": "V1.0.0.75",
+    "date": "2010-02-24",
+    "image": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/league-of-legends/8/8d/Mordekaiser_lol.jpg"
+  },
+  {
+    "title": "New Champion - Ezreal",
+    "patch": "V1.0.0.79",
+    "date": "2010-03-16",
+    "image":"https://3.bp.blogspot.com/-4RdQgJuHz5A/W6vq8OmiS5I/AAAAAAABIF4/9JfZqq2k8zIUTHL_kpyr4LQu2d4Q5s_nQCLcBGAs/s1600/81001.jpg"
+  },
+  {
+    "title": "New Champion - Shen",
+    "patch": "V1.0.0.81",
+    "date": "2010-03-24",
+    "image":"https://lolwp.com/wp-content/uploads/Shen-Splash.jpg"
+  },
+  {
+    "title": "New Skin - Yellow Jacket Shen",
+    "patch": "V1.0.0.81",
+    "date": "2010-03-24",
+    "image":"https://turbosmurfs.gg/storage/splash/Shen_2.jpg"
+  },
+  {
+    "title": "New Champion - Kennen",
+    "patch": "V1.0.0.82",
+    "date": "2010-04-08",
+    "image":"https://3.bp.blogspot.com/-UwjSag1Yyzk/VLgZwheM8gI/AAAAAAAAB0k/kZ-XSWFMD4w/w1200-h630-p-k-no-nu/Kennen_OriginalSkin.jpg"
+  },
+  {
+    "title": "New Skin - Deadly Kennen",
+    "patch": "V1.0.0.81",
+    "date": "2010-03-24",
+    "image":"https://turbosmurfs.gg/storage/splash/Kennen_1.jpg"
+  },
+  {
+    "title": "New Champion - Garen",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image":"https://lolwp.com/wp-content/uploads/Garen_Splash_01.jpg"
+  },
+  {
+    "title": "New Skin - Sanguine Garen",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image": ""
+  },
+  {
+    "title": "New Skin - Desert Trooper Garen",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUk6_qhrryrx9y_BzCgGzCTPQCxOxAy6X_N22985GC2lqPLM2wu6ahINxKTdtNMIXH1QA&usqp=CAU"
+  },
+  {
+    "title": "New Skin - Bird of Prey Anivia",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image": "https://turbosmurfs.gg/storage/splash/Anivia_2.jpg"
+  },
+  {
+    "title": "New Skin - Red Riding Annie",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image": "https://lolfire.club/en/wp-content/uploads/2022/11/Annie_RedRidingSkin.jpg"
+  },
+  {
+    "title": "New Skin - Big Bad Warwick",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image": "https://lolfire.club/en/wp-content/uploads/2022/11/Warwick_BigBadSkin.jpg"
+  },
+  {
+    "title": "New Skin - Warrior Princess Sivir",
+    "patch": "V1.0.0.83",
+    "date": "2010-04-27",
+    "image": "https://lolfire.club/en/wp-content/uploads/2022/11/Sivir_WarriorPrincessSkin.jpg"
+  },
+  {
+    "title": "Pantheon - new champion",
+    "patch": "V1.0.0.72",
+    "date": "2010-02-2",
+  "image":"https://static.wikia.nocookie.net/leagueoflegends/images/1/16/Pantheon_OriginalSkin_old.jpg"
+  },
+  {
+    "title": "Gragas - new champion",
+    "patch": "V1.0.0.72",
+    "date": "2010-02-2",
+  "image":"https://static.wikia.nocookie.net/leagueoflegends/images/0/0d/Gragas_OriginalSkin_old.jpg"
+  },
+  {
+    "title": "New Skin - Pharaoh Amumu",
+    "patch": "V1.0.0.72",
+    "date": "2010-02-2",
+  "image":"https://static.wikia.nocookie.net/leagueoflegends/images/6/60/Amumu_PharaohSkin.jpg"
+  },
+  {
+    "title": "New Skin - Noxus Poppy",
+    "patch": "V1.0.0.72",
+    "date": "2010-02-2",
+  "image":"https://static.wikia.nocookie.net/leagueoflegends/images/3/39/Poppy_NoxusSkin.jpg"
+  },
+  {
+    "title": "New Skin - Noxus Poppy",
+    "patch": "V1.0.0.72",
+    "date": "2010-02-2",
+  "image":"https://static.wikia.nocookie.net/leagueoflegends/images/c/c7/Pantheon_MyrmidonSkin.jpg"
+  },
+  {
+    "title": "New Champion - Akali",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image":"https://lol.fandom.com/wiki/Akali/Gallery/Splash_Screens#/media/File:Skin_Splash_Classic_Akali.jpg"
+  },
+  {
+    "title": "New Skin - Stinger Akali",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image":"https://www.unrankedsmurfs.com/storage/t1OUAeSiwXq7X8gPPUieF0QqFdUtZ7Xlm6pHntGE.png"
+  },
+  {
+    "title": "New Skin - Crimson Akali",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image":"https://i.redd.it/ldtljp9wjxi21.png"
+  },
+  {
+    "title": "New Skin - Matador Alistar",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image": "https://www.unrankedsmurfs.com/storage/HtFgcUJqVmnTnGyvYwn4hIyHHC94mc0965dqS4cu.png"
+  },
+  {
+    "title": "New Skin - Gentleman Cho'Gath",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image": "https://lolwp.com/wp-content/uploads/Gentlemen-Chogath-Splash.jpg"
+  },
+  {
+    "title": "New Skin - Masquerade Evelynn",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image":"https://turbosmurfs.gg/storage/splash/Evelynn_2.jpg"
+  },
+  {
+    "title": "New Skin - The Magnificent Twisted Fate",
+    "patch": "V1.0.0.85",
+    "date": "2010-05-11",
+    "image":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMWFRUXFRUXFxcYFxUXFRUXFRUXFxcVFRcYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKwBJAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EADwQAAEDAgQDBQYFAwMFAQAAAAEAAhEDIQQSMUEFUWEicYGRoRMyQrHB8AYUUtHhI2KCM5LxU3KywtJD/8QAGgEAAwEBAQEAAAAAAAAAAAAAAgMEAQAFBv/EADYRAAEDAgMFCAECBQUAAAAAAAEAAhEDIRIxQQRRYXHwEyKBkaGxwdHhMvEUI0KSwgUzUnKy/9oADAMBAAIRAxEAPwD5YuXKQuRq7WlQ5pVgR9kq7anU+MFNDWnVNDWHVAcVwanAZ/SfT0/lXFAH4fMx6iQu7OBN45E/+cSY3Zi7IhJAq4TJwp1gjyI8wly1cCC2WkEcLrHUXszRG6IlJDdZEw5TgbQgMoj1zXK5CplRYSn0wisqI7ClmNgozU0Aqlko1Wg14g+B3Cw+N4eqS3M4uDRDe7p19Vv02DcwmDh2ubBu3rbxBXPo9oNx3/e8eya/ZxVEGx3/AGvE4R8XXqOFcMq5aeIe1lSiXHMMocWxEZ2i4aZAnrvokMfwUzLSA46bB3Q8nfNdwPiBw7qmrXOYWOBGxsQR3E+ijgh2B4gjqRvHFRYKjDgdb5uPWJ97wtGo94Jzsa1hktY2cjJ+FgLjA0tPctvhjctCgP7HPvsKlRxA8gPNebx+MzNjdexawBwptP8ApMp04F4y022PLUrKX++1p0Dnegb/AJnyXoDB2mBhsBrx0QPbEla2HEt7Tm+IP0Co2lTER2nb7NB5DcrVwrKZbJuZuBYAeKscDqE9zbZJHDcWYajKVJ7R2gC45p7mgtg+K9zxrhLWtDmutA+XRfLeJYBorF7QaYcexeQ14NpPI6d60+E/ih2YU3uJaWsAm8HKP3XmCu7tO8benW/XevMNSp2oxFadXA5tXAX1v8o0WXWpZTBPcvQl4cSbX8B4LPxmHn6XCv1XoDivM8WxIpiYkk2HcL+C8bxLjdZ1g7IP7bHz1XuuMYT2jD+oXH7LyVf8M1nAVOw1jml0ucBABiSPAqfaKpp5mAevNSbUasw0mOHys7geOql4ZmLmk6OvE8jqF6prJEnax+i83hqNLDVGvdWa+DMNa4yOh0/4TrvxUyYZRc5s3JcAfIT803ZqzAyXO85TNmqsp0yKrrzlc+029ltNZI00SNcLQo4gVWB7ZAOxGUjvCSrsVzogQrKgGGyRcbqlZgP3cd/MItRioRdLhQkHIpGrRQxYHv8AoU29pk5jGXbYToEq5tvP9kkEObibkcvaf3U72gXHFUz9FyiFy2FNJQFLVykKKEhcVAUuK4FdC1ciMcRoVQFETGC8hGzOQjMxbgZB8Uw3Eh/vi/6hAPjs75pIK9II3NDnSc9+vn8GRwVDar9bo9bC7tuOY27xqPkq4di5tYgyLQtClSZW3DKmx0Y7of0nqgqvfS72HEBqLEDiBY8wPAC6eynRqmMil8hVcqDi2VKTyx8scNQfmNiOoQfzh5k+X7LmbbSIkA+EH/JOGzYf6hCdDU1RFwVkOxx2Jn75JhmGqvu45B5v/hVU63aHuMPjAHn3oTKbWA2M8ugAtB+Iptu93ldAr8cBGWk0+UlGw3DaQg5MxnV3a/hadMGY0HRUYKhH6g3/AKiT5n4AVTQ82BA9fr2XlcRTr1I/pv7yCPV0eibGBe8AYhpYQOzVsbcnwbjrsvUVKUtiJV6NDQKc/wCnUjm5077Z+V+Sx2wh7u8SfL2AHpC8tw7AvGJo0KjYLqjO5zQZJadxAKZ4ji6oq1Hns5qjyDBBEuMZXjeF6HDPNFw7Ae0SWAxmpOIIzUydBe4625ITXAagnpz8+5RN/wBPJqPO0xAADSLgyTJg5ZCxvMi+ZmZshZiBdHHrP8rL4VxB5qN/MS+mbEmcw/uDtZC9xxfhzqdFpZVEgBwDT79MxFQDS0gOHcdCvLPzCmWsZkDyJkTIEwWki28wVt0Pa0w3C1SPbMGaiQcwyuEljukEjuOll5FZ3Zumi6zc4kDgYtHGY9ElodTcJy0OhWPxfFvqNDXksh1yAcpEaka2jbXokqeJNItHsSBVFNuclwBBGUubaLj5LR43j3veM8RlAYYDey22Ux8QMjwSONxNR7AxzjlAAAOnZ0IB3vqOSeNoLjL7z6802psrqn8xmeo65L3pxLD2WR2RBEiRa0gaLHxvG6TKjqT8zHA7tMEG4c0jbqsT8OY+nTBa+GvJnMTGab9p0HSdLLa45gqeIa3O2f0uGondp5L1m1RVHcz4opLgQ0Q4aH2n5Cy8ZxpoBytJ1uYDV5PF4upiKjaYJe9xAaNm31jZP8Q4B7IEvfUI2gT5xfxssvhuIdQrNrUhdpIi0kaOEXucyjrPdMOzHDKVHVNR5AqWG79lf8RYGnSazLDnRD7ESZMi+4ROEYSpSb7QgyRmFJjWPqZf1vkEUW8pueW6e4vUZmLhTi+YNMOLCdm7A9fhSmC/EJw4ew0m1GvIJMw9pAjsnx+5UYq1Q0dln6+HXkrK2zmkRVeYNrARGl49o53lBrcbrTljJJ1dck9bekLUpNqRL6gqSBBDbDx3Xn8figTAGWQ1wJvY3G33dWwtFjh/UdHRr2w7w1+a9TZtoP8AWT4ud8kj53KcV3YjiM8zHXktp4ROw0NOZrnXlt5G7SbRG+uxSragdo4Acge1/Cg0o0bHVXmmXtgZHPeRqBqOdjuRvDjBZl5ygPfcnUkzPXuQaut0y5kbhqC7Kd1hZADYAjSwSXtMXshSuROz+v0coXYRvHmEvDxHmEgArAKAFYBQAKIBdC4NU5URlOUQCMNlQ1ikMRWUiLkWVn0YvdOa2ycKaDkRKbFBajUgtABciay6Wc1Hw7oR8g3Eq1Nl7JjGwZCa2kQVbFtdWABsG6E+9ERA3jvQX8NZGrvSPQJ+mER9NGyhTE93OSfHdGXh7yU8tnMLKoUWtuBfrt0TtN0hDLbojOiY3ugNajYYsE7hGpqi36JbCFPUolPZdq9GgAQFTFVHWym0bKuBx4do4O+90ziKYDT4/JeRwvDbZmOh8zAMGDJnqkV6xpEQAZnMxlGvju8kG01alF7cImdF7FxB8vv1TXD2AXI271j8Hc51JhcZd25NhMPcBp0AWvQeNN5Mcte76fstDy4B2UhFTqYxijNHc4WIGgI9IOqHiGZi12jmmWuGrTMz/CvS0I9N0VlIEHMezveBGhudNQsfDh3rjWfmbInhsGctV5/juMa6TAJIa8xoHEhpIPXcdAsVtUf3DyLfVep4jwprRYCCIDomNwHD42+vzXncZw+DLX04uABmNw3NEkdDe6+VdRNA9m8Ru1BHA9HeJUrXOpGOvcIRg/Ez/Jv/AMo1DEOb7rwBybmhZxn/AKjR3NVgG7vcVwBbdpI5KxtRp/U0f3fkrVrVc/vEu7yf3SwLGf6bBm/VYZe7kgugCX9lv93acf8AHT0SFfFz8MN+FvNC1hdknVKjKIBcIOgi/rcc/LgTE4gmYvAPcPHl1WViXBwMbG15JHM/wiCpJymYdAJGsZmuLh/t9F1ZjId7OcuoB94AW7XM2m3NWU2hphfPbZXfUvpPXpCGO3TA+KnJHVhNx/i4z/meSA2dlDHlsOGoPzEEHpaPFMOpSM9O43b8TDyPTkU0d09dcfTco5xZKjarhzRW1nbCfBCFUjWR3pmmx5EzA5n6Dcoy7DeVgEmyuzMdYHf+yapMnTQb8ydEg+qZiPMifJN8MqS4Cd//AEKKcZawGJIHgSEykwF4BT2WmLEZuvaXJd9F65Xy0WDR/a36VXau/wCHokQURCUhyklefKI0pmk7+0eqTaSjMajBMpjHGVpMrCIy+GaR5QimoHQCAI5R9CFmCEZrk8OVjapiOvZGfhf0pihgjIJEDc6R1Q8HWDXSbnlsk/xDxKof6YDgz4jeH9O5EC1oLzpp17pk0mMNR3kPvTn+FzuLUw8tAOTQOGvU9y0qPs3iaTg7mPi8QvL0KM3Mx3FOmiwQWO7W0GCkt2lwNwD6eR+5QUK1R0lwEeR8P2K9HSw172RCy8Lz2H45UYYqdseDXD/JegwPEGVRmaLaXkKulVpvMNz3H7y9VVTqUalmmDuOaVrUrrmshP19LBBp3MHkmYZN0YYJhdhaN5BWlhKXaFpnYbpekBp0lHZUIdI20TGghqqpNDRZWxlwQBe+gMk32+9F5j840ZQwCWsgkF13GSZB020tZemrve4OOri12mpMWuLyvM4DgOJef9Nsl0wc0neIF1FtYeS0NE2OQnUeSh24VS9jmgyJNptzWz+HDNFvj/5k/VaZHgl+F8OdRYGv1HrJKdxDIjl/N/VNpy1jQdwnnCpoWa0HcPZEbiBEmxC8xjcVUqVLtdknTK64uI0tM38OS2nt8VZlUpO1bK6uA0Ogcp/yGXLijq0i7W3L8o/CmvqkucCQ0WvGXQAFu9p8uqrxjBh5zZrtIIbpnABDm5j7roNrfxzMRlEDfXw0+ZXfmQ6zhI6pDthc6gaTnXJmY10m5J3ZzuyQdlYjrxkknX4XkX4drXHUtg5dnZh8Dhs4X74sg+17WWm0vcTDQ1pLnd0X8F6bHYJpb2QGk/8A63DhFxm2cNtP3WCfaU3GpSBFWlDjUpucIme20t90azI3K8epRfSdgqiPY8Z3eoNiAkGrUokgZrHq1XOPa22080Kq/bc+gTtSi17XVRVkS0GQS8vfc6kDX4id1m1KBzFgueekRqTsAO9NZhNlHUqnMmSeutBor0qTi01AJvkHgJJPgR5ldQp3PI6XB84K9BT4bSo4b29Z3YNmM0dWfzj9A28yvOHiLybwBNgAIHjquo1e0cS3IGPx4aqethADSboDBaO8Ec/uyLSdlLajcsi8TMQbZhvpopqAR1zOPgQyPkVDXkQRpBnuuY8U7MWSiLjitClxcmqKtWmyrYAgiJgRmHIq2O4iap7DcvIRp62WcxsHp9+q2uE4SQXHpHL+Y+qJuztq1Af6vHIdfGZTaLbYRYLKbgHm4E90n5IuDpPY8S0i4+f7St804Ez9hJ18TM5XQO+Fb/DsbFzOeQ0TezY2HSfRVqNM7rkpfmpWm5lKLwTkllwCkqqnUytKKxyCrNK0LQUZr1YPQmqzUySmBxTNF60aWJ/4WMCjMqplOoWmyppVy1P4ijRdtB3yyz/x1Wc/AxPs6kWIhzRvzIH0TAKsE50PPeAPW8Jry2p+poSOF4Uc39U2GwPv+OwXpGxlAaIjYaQsnMnMPW3GxRMAaIaPtFQwsBaBn5pttWbKujpGypVO/NS/mmB5Bui7VzTfRaGWGyOn1P7KGHT1WXieLNa9tOf+47A7Ap9tRMbVYXloNxn1ruO42Kv7ZhcQ05ZrTpQWwHAHcXGYi8z6K1HFFmhiIiCdZ1018tlm03wjMuUhwiQuEGyer4svguu7cnWNB5ABDFxJ7/DT5oFYZDEjwuqNqpkgtsucBh7qYc1AcP4+X0KbpEEKj6MAm/Tp3rmmyNjpF0tJ0VgVYi0nnEXk9Rta3mgkrbIrI8ZXXnM3wcD9El+IMaHZTUID5htRkMqi2uYa+SnE1crS61rkkwAOZJXjsU41nuqOd2cxDegGndZedtrKFQ4XMBdGe6eOfhkvO22s1tgJcfbenDTpHMXV2Au1DRm9pE3cwDKD1B8Alfb0aZsC/oQWtJGmabkdLrOa9zXHLBm1wDI7j9EzWoEODKktqObmyht5I7DY1k3PiOcrzTRAzJPp7Lye3cbNAHXFVxeIqV3F9R2bKLDZrZHut2Fwk6wb8KY9rkqB1OXNvFoLmwQ8EbSMwKE6icwaNHEZTzDjAnrdOaMmgRuHwkEEneeoXOd7ruYg+C6m6NdEfEYYtBa4Q4GfA2kdEu0XiL3XEFpIOieWn9J0RxUyuh1wSDPO8z+69kzGU8oIHZgwPovGUnBwyO02PIp7hbX9pvwj3uQ5R3qrZqmAlgGfpHx7Z6JlGq67BmfjX7/C1cXiGvGzelyCkiOg7xdAcYXU3HZFjnNCHybokdFyrnClEikdfsliqqSqqdTKVZqoFdpRAIgrBXChcCiIRK8LmlULlIK4NXSiZ0RldAlQE0EpgcU37SU1Rss1hTtE7J7XKik+SnajtO5Bx+N9m3s+8R5dShYnGBjTUd/iOfRIcLrBxFRxl5rUBBBMNL7uNojQR1S61fs2wP1ew38zp57kVSphyz04Df8ASZwPB6lTswCTcnfSTp0ReGYotPsKpuCQ13ONivX8Vd+WY5jIAqR2rEiLw2TABvYx7vl8+xHaIaLGSSf0gXzHlqvOa4t7zTEZHrMbwk3pOBbmvWNbA31jv6DmUUPsvLih7Zwe+cjRla47QdTyMraompTH9btNkw/V0TbOBrI3F+c7Xs2kug1GxO6THPfzFxYQblejSql0kttvz8SN3FOF6qXwdfFRIInxBFwRzB3VRvYX57de9Ugx+NU7EVo0K8Df6Rz70wKoKyqbkx7QcgLDnrzujzTCQdU3Upgm3nohmggNrKzcT0XWGaUXPCzfxFw172dk2Ekt/V/I5LzFc5WNZyknvJmF7LieMim4/wBpXgMRVlRbSADIXl7aQDi1IQKr+S9BSqVH2bEgCTYXAuZO5jXVYNLKC0vuJuOYC3sWwVB7VjmgReXQLE3kDVQPbOY69F57SdFHFKJpNpgulzgXE7DtQGtAjvJ6rEruIc1w11nrMrVxmKa8MOennYwNkPJzZSS0kFut73vGyysYRIgg9RogpAtbfP8AJ+ETzJsV6LHEVaQeOUj/ANx98l5+pUIt+6Z4TXqgu9nEgAlp0fGtucfJVxVAnIcsh3uZZIM6Dv2Vm0fzAKkHju58tL5W5q17u0aHgX1t1+Lc0qxsxHP1Xo6GGdRbc3jtNGnmsBzXU3FrgQ5pgyLgt271t4XiQfJecugawA5dLku59+kLtlLDJJvpuiDPDhF50CyiGXxWOnr+3GcjovVpXsrUaep6FPGk0jsuB8QhPpuDYCo7IgzCL+HLbws9crlhXIIU8FLFQVUlQp1OiBWBQgrhcFoKuXLmlRCtCYLrZlTKiVIClFdEolQHK8KMqK65FpBNhwDS4mGhKMag8Td2mtcOxFup6pmIsbPV+vOAqmOwtLoStfEGq++mwMxHgtrg+MbRDiQRUgZSA0wC1wJGYQDc328BOJSAaS4nScsRObbXYWlXr4ouzOOpF/MrznEvN0LSQcRK1auJGUM/M1ntdHZdLgLSKesSCYsIT/A+Fggvc0Ry2MbdQPUrI4Hgi6HOEQLdJv5n0C9Ix+UEaHlyCs2SjP8AMdkMuJ38hpxvoJr2SmJFV4tp9pfE4J9MH2B1B7OuU8xOvdr3pTB1KjmuBqU2NyzDnxmI95lOWnU6DaehC1BWEX1CUxlBtWcw5HoevQ9RdNq7ODen5aHluPpyum1mnOmY4afjlkYysiYHgmO9gcXQo+0w8kuGdkiDeWgy143geGyMyrLWvgjM0OAPvAHQFLYDEYlg/LNqH8u5xLgTDmti5n4gQInqJTlQZr+nyCVs5cXuAsBmCI7xy8cySMxhzlI2Y1Bix5buPXUqWGyhz1z7WVi9WyrxUEQNEMOKu0FXDrTI1iN+/uQ69WBJ937ssAQQDmVj/iHF29mDc3PQbD6rzRGZ0DmmOIYgucZ3n1J/dP8A4ZwmapmOjb30nb76KEntqkDL46uvGqO/iK0ZDLkOrpLi3DHUiJu0ix5EatWvwLtUDTJ3c3/eJnzJWnxfDCpSc0a6jvF/vvWL+H3QXN5gHxZ/z6Kum0U6ssyPUegVLWtpVwWfpcD+3KYXn3NO+uh7wpWtxbAkPLh7tQyD+lx2PeZv1SFKnLg3QkgX5kxdecaRDsHly0UVSk5jo32HXHPxjMFUo1iCIMEaHkt/AVmFjaY5e674r6g735LAxNItJBsQYK0OF45rYZVbmp5pndp59AnbO7A4tNtL7/iTYm43pmz1i1xa633lfdlBPKZC0q/D6RIzBzTF9jqdZEnvTOG4VQ1yk/5O+iS4viaoe58jK4/pmOkkk+ZKpwviAmHvfm0F+wf8QLJrTSDsLmgHiG+U5HgRYqwPDHQ4DxA+ytZ2AZsxpEc3LPrNaPhj/cETDVzmjkCl8Ud1riIsB5BdUqMLZDQPAKmccyuSy5B2hUnalLqVClTKZcFcKArBEAihSFaVAULVsKQVIVVKMLUQKyFKkOWyuRmlWxdL2lMjcXH1Qg9Fo1oKY0giDkevTNNpu0ORzWW1uZpOhG3JF4fhc5voCe4/wrYvBn2hDZyuv/Hj+60mAMGQeP7KdlHE8h2mf0Oe/QX3ImMM9/IeqaGIDQA3b16lQa5SYKKxwV8yqe3JTDa5+wiMrbb/AL96C2ESAbrYRF0hGfVE6RoY5GNR97orKnVLMeAZN+X33KWu6W2XX1QhxlP03ypJBSjqsaWVRXK0cUWJ2UJ5pWV+IcTDQ0b3J7tB5/JN06hm/kvOcYxOdzjtoO4Je0OLaZ42+0uu5zKZJ1t99cVlZy4yV6vgoDaQ6zPnC8qSCbCLDrJAuV6zDs/ps/7Qp9lbJJ4KbY2lxceCa9vyWY7D+zeKgu2STGrM07crpt79ggSq8s1dgAz0vyK6s7UES07bELHx2Hyunxa7u2PMjmtRwgRtt06ILm5mlviO9IqMDu75Hdw656JVQYhh6/bdxSPFKgqPzgRIGbvFjHTRZt9Oa3Kwmiz+0/N0H6LKr0oKn2hpLy43m+7PP1Ue0iXYt9/PPrxXpcLUFSmDEiAHDq3/AIChzQewGtE62HhtfRYfDsaabv7Tr+69OGts4+BGhVbahe2QefXH3lPaTUbiGmf3459XAzBlskkbc9r8kljKoJMCAtPiGI7IkESsSsZSqlrBHtMAYG5ZoK5TK5JUSXCsFVSEsFLV1IUBcESNXULlK1aoVlRSCtXBWUqAVZEiXBSoCuESJEbX9EMvXQuyoi4oy4lSHq4KqGqWhGHImlGp1Ew16UDUdreqa0p7CUX2ncql5O6HlXSulFiKZbUEERdTUfuN+SA541shVMflEC59Au7QNuUXagZrsdjcoyg3+LoOXesHEvRcTUvMzr6pV7pUNWqahnyXm16xqG6szRb2CxB9k3pmHk5Y2Hp5zAWjTGVuUGUdElsuG6EWzksJdpEeybdVVM0oGdSTbx8UwvTjUlXLyoc9QGn+VBaglASUSneRzn1H7rNrCfqtSgI1SWKpkOMczbosq3aCsqglgKzTYpzCY59P3Tblt5JSq08lLTzSGuLbjNStcWmWmCvROqlwvrr4rOqFMF90CqFRUMqqs7EhyuVZXJSRKorKFyWgUqQVC5atlEUKoKtKKUUqVyrKmVsrpUgqZVV0rZWq8qweqSulFKKUUPXZkOVIKKUUomdTnQ5USulbiRhVVxXKWzKcyIPRConm1CUKohsqwq1aqIvEI3VBClL4wWH34KtTEAG59JS+MxINpBGtkhzwAQp3PEJeo4c5VZQ2ulXlIBU60OHsM5otf1CaKkusLRby6KFSLCFULCAuCtO6pKkOhdK4FMOPgPu6mlXAPZA8b+hSrnk6rmmF2JFjumj0SmKNj3Hz2TGZL1rg9xWuNljzZZ7nOA1S7TdGquIsQh1DEd11LClctbBVAWm9x8kOs+Ulg6sHwhHc5NmQEzFLQF0rkOVyxZKOuXLklAoXKVyKVq5SoXLpWSpXKAuWrVwKuFVcFsrZVlCkLkQWrpUyoXLZWyrSoJVVyyV0rpUgqFy5YplVL1ZVKyVqTqVjcG4+/JLlzeXqVqZByCr7Jv6R5IcIQ3KzCSegVWggrX9i39I8gpDRyC6FmFLtxvRSMX0TC5FJRXQPzXRW/Moq5dK66F+ZXfmQiqV0rroP5sBQcaOSKuXStkpLEVA4hWrHsj7nmfknco5BUOHbyQkSZKyDos0PTHtRzTDaY5KxYFwEIbpbOOahMhgULVy//9k="
+  },
+  {
+    "title": "New Champion - Olaf",
+    "patch": "V1.0.0.87",
+    "date": "2010-06-08",
+    "image":"https://lolwp.com/wp-content/uploads/Olaf_Splash_01.jpg"
+  },
+  {
+    "title": "New Item - Needlessly Large Rod",
+    "patch": "V1.0.0.87",
+    "date": "2010-06-08",
+    "image":"https://zilliongamer.com/uploads/tft-mobile/set-5/items/needlessly-large-rod.jpg"
   }
+
 ]
