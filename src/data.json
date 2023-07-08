@@ -1,0 +1,79 @@
+[
+    {
+      "title": "Irelia - Full Relaunch",
+      "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg",
+      "patch": "V8.7",
+      "date": "2018-04-04"
+    },
+    {
+      "title": "Badlands Baron Rumble - New Skin",
+      "patch": "V8.7",
+      "date": "2018-04-04",
+      "image": "https://lolfire.club/en/wp-content/uploads/2022/11/Rumble_BadlandsBaronSkin.jpg"
+    },
+    {
+      "title": "Lancer Stratus Wukong - New Skin",
+      "patch": "V8.7",
+      "date": "2018-04-04",
+      "image": "https://3.bp.blogspot.com/-0ohLIj9RRkk/WrFdEM6O7uI/AAAAAAAA7so/dWxRxZOj_0MwDP89taQy5Cmv1I9sqf0jQCLcBGAs/s1600/62006.jpg"
+    },
+  {"title": "Mordekaiser Full Relaunch","patch":"V9.12", "date": "2019-06-11", "image" : "https://images3.alphacoders.com/101/1018192.png" },
+  {"title": "Qiyana - New Champion", "patch":"V10.09", "date": "2019-06-26", "image": "https://images8.alphacoders.com/102/1020473.jpg"},
+  {"title": "Lillia - New Champion", "patch":"V10.12", "date": "2020-07-22",  "image": "https://images.alphacoders.com/129/1294205.jpg" },
+  {"title": "Yone - New Champion", "patch":"V10.16","date": "2020-08-05", "image": "https://images3.alphacoders.com/109/1091283.jpg" },
+  {"title": "Seraphine - New Champion", "patch":"V10.22", "date": "2020-10-28", "image": "https://images4.alphacoders.com/110/1107588.jpg" },
+  {
+    "title": "Udyr, the Animal Spirit Released",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg"
+  },
+  {
+    "title": "Deathfire Grasp Introduced",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
+  },
+  {
+    "title": "Haunting Guise Introduced",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
+  },
+  {
+    "title": "Leviathan Introduced",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
+  },
+  {
+    "title": "Quicksilver Sash Introduced",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
+  },
+  {
+    "title": "Sword of the Divine Introduced",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
+  },
+  {
+    "title": "Sword of the Occult Introduced",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
+  },
+  {
+    "title": "Tryndamere's Battle Fury and Bloodlust Reworked",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tryndamere_0.jpg"
+  },
+  {
+    "title": "Teemo's Camouflage Introduced as New Innate",
+    "patch": "V1.0.0.61",
+    "date": "2009-12-02",
+    "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg"
+  }
+]
