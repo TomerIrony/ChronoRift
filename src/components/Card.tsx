@@ -95,7 +95,7 @@ function Card(props: CardProps) {
 
         const renderButtonsContainer = () => {
             return (
-                <Flex marginTop={"40px"}  flexDir="column" gap="12px"
+                <Flex marginTop={ isMobile ? "20px" :"40px"}  flexDir="column" gap="12px"
                 style={{
                     transition: 'opacity 0.3s ease-out',
                     opacity: renderCardAnswer ? 0 : 1,
@@ -159,7 +159,7 @@ function Card(props: CardProps) {
         <Flex
   justifyContent="center"
   width={isMobile ? '100vw' :"50vw"}
-  height={ isMobile ? "50vh" :'auto'}
+  height={ isMobile ? "100vmin" :'auto'}
   position="relative"
 >
   <div
@@ -180,7 +180,7 @@ function Card(props: CardProps) {
       position: 'relative',
       zIndex: 1,
       color: 'white',
-      marginTop:isMobile ? "10vh" :"30vh"
+      marginTop:isMobile ? "5vh" :"30vh"
       
     }}
   >

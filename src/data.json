@@ -23,43 +23,43 @@
   {"title": "Yone - New Champion", "patch":"V10.16","date": "2020-08-05", "image": "https://images3.alphacoders.com/109/1091283.jpg" },
   {"title": "Seraphine - New Champion", "patch":"V10.22", "date": "2020-10-28", "image": "https://images4.alphacoders.com/110/1107588.jpg" },
   {
-    "title": "Udyr, the Animal Spirit Released",
+    "title": "Udyr - New Champion",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg"
   },
   {
-    "title": "Deathfire Grasp Introduced",
+    "title": "Deathfire Grasp",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
   },
   {
-    "title": "Haunting Guise Introduced",
+    "title": "Haunting Guise",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
   },
   {
-    "title": "Leviathan Introduced",
+    "title": "Leviathan",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
   },
   {
-    "title": "Quicksilver Sash Introduced",
+    "title": "Quicksilver Sash",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
   },
   {
-    "title": "Sword of the Divine Introduced",
+    "title": "Sword of the Divine",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
   },
   {
-    "title": "Sword of the Occult Introduced",
+    "title": "Sword of the Occult",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image": "https://gameriv.com/wp-content/uploads/2020/11/new-icons.jpg"
@@ -71,9 +71,27 @@
     "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tryndamere_0.jpg"
   },
   {
-    "title": "Teemo's Camouflage Introduced as New Innate",
+    "title": "Teemo's Camouflage - New Innate",
     "patch": "V1.0.0.61",
     "date": "2009-12-02",
     "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg"
+  },
+  {
+    "title": "Nidalee - New Champion",
+    "patch": "V1.0.0.63",
+    "date": "2009-12-17",
+    "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nidalee_0.jpg"
+  },
+  {
+    "title": "Poppy - New Champion",
+    "patch": "V1.0.0.70",
+    "date": "2010-01-13",
+    "image":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg"
+  },
+  {
+    "title": "Dragon Now Spawns at 2:30 on the Summoner's Rift",
+    "patch": "V1.0.0.70",
+    "date": "2010-01-13",
+    "image":"https://runetarium.com/wp-content/uploads/2022/03/runeterra-ixtal-06.webp"
   }
 ]

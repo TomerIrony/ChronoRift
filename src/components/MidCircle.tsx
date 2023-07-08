@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { GameStatus } from '../types/game-status-types';
 import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import { TiEquals } from 'react-icons/ti';
+import { useSelector } from 'react-redux';
+import { uiIsMobleSelector } from '../store/ui/selector';
 
 interface MidCircleProps {
     status: GameStatus
@@ -12,6 +14,7 @@ interface MidCircleProps {
 function MidCircle(props: MidCircleProps) {
 
     const [startAnimation, setStartAnimation] = useState(false);
+    const isMobile = useSelector(uiIsMobleSelector);
 
     useEffect(() => {
         if(props?.status === GameStatus.FAIL){
@@ -72,8 +75,8 @@ function MidCircle(props: MidCircleProps) {
         justifyContent={'center'}
         alignItems={'center'} 
          position={'absolute'}
-         w={'100px'}
-         h={'100px'}
+         w={isMobile ? '75px' :'100px'}
+         h={isMobile ? '75px' :'100px'}
          color={theme.colors.black}
          backgroundColor={theme.colors.white}
          top="50%"
