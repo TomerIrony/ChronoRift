@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ChronoRift/static/css/main.ba6bf18a.css",
+    "main.js": "/ChronoRift/static/js/main.a840c06a.js",
+    "static/js/787.e644b208.chunk.js": "/ChronoRift/static/js/787.e644b208.chunk.js",
+    "index.html": "/ChronoRift/index.html",
+    "main.ba6bf18a.css.map": "/ChronoRift/static/css/main.ba6bf18a.css.map",
+    "main.a840c06a.js.map": "/ChronoRift/static/js/main.a840c06a.js.map",
+    "787.e644b208.chunk.js.map": "/ChronoRift/static/js/787.e644b208.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba6bf18a.css",
+    "static/js/main.a840c06a.js"
+  ]
+}
