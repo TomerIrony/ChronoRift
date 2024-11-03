@@ -1,14 +1,9 @@
 import * as React from "react"
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
   Flex,
+  theme,
+  useMediaQuery,
 } from "@chakra-ui/react"
 import Card, { CardAnswer } from "./components/Card"
 import { useEffect, useState } from "react"
@@ -20,122 +15,222 @@ import FailScreen from "./components/FailScreen"
 import Scores from "./components/Scores"
 import jsonData from './data.json'
 import useMobileDetection from "./hooks/useMobileDetection"
-import { useDispatch } from 'react-redux';
+import './AppAnimations.css';
 
+export const App = () => {
+  const initCards: CardType[] = jsonData
 
-
-
-export const App = () =>{ 
-const initCards : CardType[] = jsonData
-
-  const [streak, setStreak] = useState(0);
-  const [allCards, setAllCards] = useState<CardType[]>([]);
-  const [leftCard,setLeftCard] = useState<CardType | undefined>();
-  const [rightCard,setRightCard] = useState<CardType | undefined>();
-  const [preLoadNextCard,setPreLoadNextCard] = useState<CardType | undefined>();
-  const [gameStatus, setGameStatus] = useState(GameStatus.VS);
+  // Main State
+  const [streak, setStreak] = useState(0)
+  const [allCards, setAllCards] = useState<CardType[]>([])
+  const [leftCard, setLeftCard] = useState<CardType | undefined>()
+  const [rightCard, setRightCard] = useState<CardType | undefined>()
+  const [gameStatus, setGameStatus] = useState(GameStatus.VS)
   const [currentScreenToDisplay, setCurrentScreenToDisplay] = useState<Screens>(Screens.GAME)
-  const isMobile = useMobileDetection();
+  const isMobile = useMobileDetection()
+  const [isSmallScreen] = useMediaQuery("(max-width: 768px)")
+  const [isAnimating, setIsAnimating] = useState(false);
 
+  // Preload Images and Initialize Cards
   useEffect(() => {
-    setAllCards(shuffleArray(initCards))
+    const shuffledCards = shuffleArray(initCards)
+
+    // Preload images and only set the cards that successfully load
+    const preloadImages = async () => {
+      const loadedCards = await Promise.all(
+        shuffledCards.map((card) => preloadImage(card))
+      )
+      const validCards = loadedCards.filter((card): card is CardType => card !== null)
+      setAllCards(validCards)
+      setLeftCard(validCards[0])
+      setRightCard(validCards[1])
+    }
+
+    preloadImages()
   }, [initCards])
 
+  // Save High Score
   useEffect(() => {
-    setLeftCard(allCards[streak]);
-    setRightCard(allCards[streak + 1]);
-    setPreLoadNextCard(allCards[streak + 2])
-  }, [streak, allCards]);
-
-  function shuffleArray<T>(array: T[]): T[] {
-    const shuffledArray = [...array];
-    let currentIndex = shuffledArray.length;
-  
-    while (currentIndex !== 0) {
-      const randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // Swap current element with randomly selected element
-      [shuffledArray[currentIndex], shuffledArray[randomIndex]] = [
-        shuffledArray[randomIndex],
-        shuffledArray[currentIndex],
-      ];
+    const savedHighScore = parseInt(localStorage.getItem("highScore") || "0")
+    if (streak > savedHighScore) {
+      localStorage.setItem("highScore", streak.toString())
     }
-  
-    return shuffledArray;
-  }
+  }, [streak])
 
-
-  const handleClickPlayAgain = () => {
-    setStreak(0);
-    setGameStatus(GameStatus.VS);
-    setCurrentScreenToDisplay(Screens.GAME);
-    setAllCards(shuffleArray(initCards))
-  }
-
-  const handleAnswerClick = (isAnswerCorrect: boolean, isSame?: boolean) => {
-    if(isSame){
-      setGameStatus(GameStatus.SAME);
-      setTimeout(() => {
-        setStreak((prev) => prev + 1);
-        setGameStatus(GameStatus.VS)
-      }, 1500);
-      return
-    }
-    if(isAnswerCorrect){
-      setGameStatus(GameStatus.SUCCESS);
-      setTimeout(() => {
-        setStreak((prev) => prev + 1);
-        setGameStatus(GameStatus.VS)
-      }, 1500);
-    }
-    else {
-      setGameStatus(GameStatus.FAIL);
-      setTimeout(() => {
-        setCurrentScreenToDisplay(Screens.FAIL)
-      }, 1500);
-    }
-  }
-
-  
-
-  const renderCardHolder = () => {
-      let correctAnswer = CardAnswer.AFTER;
-      if(!!leftCard?.date && !!rightCard?.date){
-        const leftCardDate = new Date(leftCard?.date); 
-        const rightCardDate = new Date(rightCard?.date);
-
-  
-        if(leftCardDate > rightCardDate){
-          correctAnswer = CardAnswer.BEFORE
+  // Preload the next two images when `streak` changes
+  useEffect(() => {
+    const preloadNextImages = () => {
+      const nextImages = [allCards[streak + 2], allCards[streak + 3]]
+      nextImages.forEach((card) => {
+        if (card?.image) {
+          const img = new Image()
+          img.src = card.image
         }
-        if(leftCardDate?.toISOString() === rightCardDate?.toISOString()){
-        
-          correctAnswer = CardAnswer.SAME
-        }
+      })
+    }
+    preloadNextImages()
+  }, [streak, allCards])
+
+  // Image Preload Function
+  const preloadImage = (card: CardType): Promise<CardType | null> => {
+    return new Promise((resolve) => {
+      if (!card.image) {
+        resolve(null); // Resolve with null if image is undefined
+        return;
       }
       
+      const img = new Image();
+      img.src = card.image;
+      img.onload = () => resolve(card); // Return the card if image loads
+      img.onerror = () => resolve(null); // Return null if image fails to load
+    });
+  }
+
+  // Shuffle Array Function
+  function shuffleArray<T>(array: T[]): T[] {
+    const shuffledArray = [...array]
+    let currentIndex = shuffledArray.length
+    while (currentIndex !== 0) {
+      const randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex--
+      ;[shuffledArray[currentIndex], shuffledArray[randomIndex]] = [
+        shuffledArray[randomIndex],
+        shuffledArray[currentIndex],
+      ]
+    }
+    return shuffledArray
+  }
+
+  // Play Again Handler
+  const handleClickPlayAgain = () => {
+    setStreak(0)
+    setGameStatus(GameStatus.VS)
+    setCurrentScreenToDisplay(Screens.GAME)
+    const shuffledCards = shuffleArray(initCards)
+    setAllCards(shuffledCards)
+    setLeftCard(shuffledCards[0])
+    setRightCard(shuffledCards[1])
+  }
+
+  // Answer Click Handler with Correct Answer Logic
+  const handleAnswerClick = (isAnswerCorrect: boolean, isSame?: boolean) => {
+    if (isSame) {
+      setGameStatus(GameStatus.SAME)
+      setIsAnimating(true); // Start the animation
+      setTimeout(() => {
+        setGameStatus(GameStatus.VS)
+        setStreak((prev) => prev + 1)
+        updateCardsForNextRound(streak + 1)
+        setIsAnimating(false); // Reset the animation
+      }, 1500)
+      return
+    }
+    if (isAnswerCorrect) {
+      setGameStatus(GameStatus.SUCCESS)
+      setIsAnimating(true); // Start the animation
+      setTimeout(() => {
+        setGameStatus(GameStatus.VS)
+        setStreak((prev) => prev + 1)
+        updateCardsForNextRound(streak + 1)
+        setIsAnimating(false); // Reset the animation
+      }, 1500)
+    } else {
+      setGameStatus(GameStatus.FAIL)
+      setTimeout(() => {
+        setCurrentScreenToDisplay(Screens.FAIL)
+      }, 1500)
+    }
+  }
+  
+  // Update Cards for the Next Round
+  const updateCardsForNextRound = (nextStreak: number) => {
+    if (nextStreak < allCards.length - 1) {
+      // Normal case: update left and right cards with the next pair
+      setLeftCard(rightCard)
+      setRightCard(allCards[nextStreak + 1])
+    } else if (nextStreak === allCards.length - 1) {
+      // Last card: keep the current right card as the last one and set leftCard
+      setLeftCard(rightCard)
+      setRightCard(undefined) // No more right cards to compare
+    } else {
+      // If we reach here, it means we are past the last card
+      setGameStatus(GameStatus.FAIL) // Or display a "Congratulations" screen
+      setCurrentScreenToDisplay(Screens.FAIL)
+    }
+  }
+  
+
+  // Determine Correct Answer
+  const getCorrectAnswer = () => {
+    
+    if (leftCard?.date && rightCard?.date) {
+      const leftCardDate = new Date(leftCard.date)
+      const rightCardDate = new Date(rightCard.date)
+      
+      if (leftCardDate > rightCardDate) {
+        
+        return CardAnswer.BEFORE
+      }
+      if (leftCardDate.toISOString() === rightCardDate.toISOString()) return CardAnswer.SAME
+      return CardAnswer.AFTER
+    }
+    return CardAnswer.AFTER
+  }
+
+  // Card Holder Renderer
+  const renderCardHolder = () => {
     return (
-      <Flex position={'relative'} flexDir={isMobile ? 'column' : 'row'} w='100vw'>
-        <Scores score={streak}/>
-        {!!leftCard && <Card isLeftCard={true} card={leftCard}/>}
-        <MidCircle status={gameStatus}/>
-        {!!rightCard && 
-        <Card isLeftCard={false} card={rightCard} correctAnswer={correctAnswer} handleAnswerClick={handleAnswerClick}/>}
-        {!!preLoadNextCard &&
-         <Card isLeftCard={false} card={preLoadNextCard} isPreLoadCard={true}/>}
+      <Flex position={'relative'} flexDir={isMobile || isSmallScreen ? 'column' : 'row'} w='100vw'>
+        <Scores score={streak} />
+        {leftCard && (
+          <Flex
+            as={Card}
+            isLeftCard={true}
+            card={leftCard}
+            className={isAnimating ? "slideLeft" : ""}
+            style={{
+              animation: isAnimating ? "slideLeft 0.5s ease-out forwards" : "none",
+              position: 'absolute',
+            }}
+          />
+        )}
+        <MidCircle status={gameStatus} />
+        {rightCard && (
+          <Flex
+            as={Card}
+            isLeftCard={false}
+            card={rightCard}
+            correctAnswer={getCorrectAnswer()}
+            handleAnswerClick={handleAnswerClick}
+            className={isAnimating ? "slideInFromRight" : ""}
+            style={{
+              animation: isAnimating ? "slideInFromRight 0.5s ease-out forwards" : "none",
+              position: 'absolute',
+            }}
+          />
+        )}
       </Flex>
     )
   }
+  
 
+  // Fail Screen Renderer with High Score Check
   const currentContentToRender = {
     [Screens.GAME]: renderCardHolder(),
-    [Screens.FAIL]: <FailScreen score={streak} playAgainCallback={handleClickPlayAgain}/>
+    [Screens.FAIL]: (
+      <FailScreen
+        score={streak}
+        highScore={parseInt(localStorage.getItem("highScore") || "0")}
+        playAgainCallback={handleClickPlayAgain}
+      />
+    ),
   }
 
-  return (  <ChakraProvider theme={theme}>
-      <Flex textAlign="center" fontSize="xl" minH="100vh" >
+  return (
+    <ChakraProvider theme={theme}>
+      <Flex textAlign="center" fontSize="xl" minH="100vh">
         {currentContentToRender[currentScreenToDisplay]}
       </Flex>
-  </ChakraProvider>
-)}
+    </ChakraProvider>
+  )
+}

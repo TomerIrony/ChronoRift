@@ -12,7 +12,7 @@ const saveScoreToLocalStorage = (score: number) => {
 
   const getHighScoreFromLocalStorage = (): number => {
     // Retrieve the existing score from local storage
-    const existingScore = JSON.parse(localStorage.getItem('score') || 'null');
+    const existingScore = JSON.parse(localStorage.getItem('highScore') || 'null');
   
     // Check if the score exists
     if (existingScore !== null) {

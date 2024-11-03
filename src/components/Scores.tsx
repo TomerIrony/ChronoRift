@@ -16,14 +16,14 @@ function Scores(props: ScoresType) {
     useEffect(() => {
         const highscoreFromStorage = localStorageService.getHighScoreFromLocalStorage();
         setHighScore(highscoreFromStorage)
-    }, [])
+    }, [props?.score, localStorageService.getHighScoreFromLocalStorage()])
 
     return (
         <Flex fontWeight={'bold'} w={'90%'}
         style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}
          color={theme.colors.white} zIndex={5} bottom={isMobile ? '2em' : '1em'} position={'absolute'} justifyContent={'space-between'} alignItems={'center'}>
             <Box>
-            {`High Score: ${highScore ?? 0}`}
+            {`High Score: ${!!props?.score && props?.score > highScore ? props?.score : highScore ?? 0}`}
             </Box>
             <Box>
                 {`Score: ${props?.score ?? 0}`}

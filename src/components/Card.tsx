@@ -6,113 +6,115 @@ import { Button } from '@chakra-ui/button';
 import { useSelector } from 'react-redux';
 import { uiIsMobleSelector } from '../store/ui/selector';
 
-export enum CardAnswer{
+export enum CardAnswer {
     AFTER,
     BEFORE,
-    SAME
+    SAME,
 }
 
 interface CardProps {
-    card: CardType,
+    card: CardType;
     correctAnswer?: CardAnswer;
     handleAnswerClick?: (isAnswerCorrect: boolean, isSame?: boolean) => void;
     isLeftCard: boolean;
     isPreLoadCard?: boolean;
-    
 }
 
 function Card(props: CardProps) {
     const [renderCardAnswer, setRenderCardAnswer] = useState(false);
     const [showContainer, setShowContainer] = useState(false);
     const isMobile = useSelector(uiIsMobleSelector);
+
     useEffect(() => {
-        setShowContainer(false)
-        setRenderCardAnswer(false)
-    }, [props?.card])
+        setShowContainer(false);
+        setRenderCardAnswer(false);
+    }, [props?.card]);
 
     useEffect(() => {
         if (renderCardAnswer) {
-          const timer = setTimeout(() => {
-            setShowContainer(true);
-          }, 300); // 0.3s delay
-          return () => clearTimeout(timer);
+            const timer = setTimeout(() => {
+                setShowContainer(true);
+            }, 300); // 0.3s delay
+            return () => clearTimeout(timer);
         }
-      }, [renderCardAnswer]);
+    }, [renderCardAnswer]);
 
-    const {title, image, patch} = props?.card
+    const { title, image, patch } = props?.card || {}; // Added fallback to an empty object
 
-    const handleAnswerClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, isAnswerCorrect: boolean, isSame?: boolean) : void => {
+    const handleAnswerClick = (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+        isAnswerCorrect: boolean,
+        isSame?: boolean
+    ): void => {
+        
         setRenderCardAnswer(true);
-        if (!!props?.handleAnswerClick || isSame) {
+        if (props?.handleAnswerClick || isSame) {
+            
             setTimeout(() => {
-                if(isSame){
-                    !!props?.handleAnswerClick && props.handleAnswerClick(isAnswerCorrect, isSame);
+                if (isSame) {
                     
-                }else {
-                    !!props?.handleAnswerClick && props.handleAnswerClick(isAnswerCorrect);
+                    props.handleAnswerClick && props.handleAnswerClick(true, isSame);
+                } else {
+                    props.handleAnswerClick && props.handleAnswerClick(isAnswerCorrect);
                 }
             }, 300); // 0.3s delay
-          }
-    }
+        }
+    };
 
-    const renderLeftCardText = () => {
-        return (
-            <>
-            {
-                <Text 
-                fontWeight={'bold'}  
-                 color={theme.colors.yellow[200]} fontSize={isMobile ? "5xl" :"8xl"}>
-                  {patch}
-                </Text>
-            }
-            </>
-        )
-    }
+    const renderLeftCardText = () => (
+        <Text fontWeight={'bold'} color={theme.colors.yellow[200]} fontSize={isMobile ? '5xl' : '8xl'}>
+            {patch}
+        </Text>
+    );
 
-    const renderButton = (text: string, callback?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void) => {
-        return (
-            <Button
-            _hover={{color: theme.colors.black, backgroundColor:theme.colors.white }}
+    const renderButton = (
+        text: string,
+        callback?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    ) => (
+        <Button
+            _hover={{ color: theme.colors.black, backgroundColor: theme.colors.white }}
             color={theme.colors.yellow[200]}
             backgroundColor={'transparent'}
-            borderRadius={'50px'} 
+            borderRadius={'50px'}
             padding={'25px'}
             size={'lg'}
             onClick={(e) => {
-                if(!!callback)
-                    callback(e)
+                if (callback) callback(e);
             }}
             height={'55px'}
             width={'280px'}
-            border={`1px solid ${theme.colors.white}`}>
-                {text}
-            </Button>
-        )
-    }
-
-
+            border={`1px solid ${theme.colors.white}`}
+        >
+            {text}
+        </Button>
+    );
 
     const renderRightCardText = () => {
-
-        const renderButtonsContainer = () => {
-            return (
-                <Flex marginTop={ isMobile ? "20px" :"40px"}  flexDir="column" gap="12px"
+        const renderButtonsContainer = () => (
+            <Flex
+                marginTop={isMobile ? '20px' : '40px'}
+                flexDir="column"
+                gap="12px"
                 style={{
                     transition: 'opacity 0.3s ease-out',
                     opacity: renderCardAnswer ? 0 : 1,
                     pointerEvents: renderCardAnswer ? 'none' : 'auto',
-                    }}
-                >
-                    {renderButton('After', (e) => {handleAnswerClick(e, props.correctAnswer === CardAnswer.AFTER, props.correctAnswer === CardAnswer.SAME)})}
-                    {renderButton('Before', (e) => {handleAnswerClick(e, props.correctAnswer === CardAnswer.BEFORE, props.correctAnswer === CardAnswer.SAME)})}
-                
-                </Flex>
-            )
-        }
+                }}
+            >
+                {renderButton('After', (e) => {
+                    console.log(props?.correctAnswer, props);
+                    
+                    return handleAnswerClick(e, props.correctAnswer === CardAnswer.AFTER, props.correctAnswer === CardAnswer.SAME)
+                }
+                )}
+                {renderButton('Before', (e) =>
+                    handleAnswerClick(e, props.correctAnswer === CardAnswer.BEFORE, props.correctAnswer === CardAnswer.SAME)
+                )}
+            </Flex>
+        );
 
-        const renderAnswerAppearContainer = () => {
-            return (
-                <Flex
+        const renderAnswerAppearContainer = () => (
+            <Flex
                 style={{
                     opacity: showContainer ? 1 : 0,
                     display: showContainer ? 'flex' : 'none',
@@ -120,79 +122,65 @@ function Card(props: CardProps) {
                 }}
                 flexDir="column"
                 gap="12px"
-                >
-                <Text color={theme.colors.yellow[100]} fontSize={isMobile ? "5xl" :"8xl"}>
+            >
+                <Text color={theme.colors.yellow[100]} fontSize={isMobile ? '5xl' : '8xl'}>
                     {patch}
                 </Text>
-                </Flex>
-            )
-        }
-
-        
+            </Flex>
+        );
 
         return (
-            <Box >
-               {renderAnswerAppearContainer()}
-               {renderButtonsContainer()}
+            <Box>
+                {renderAnswerAppearContainer()}
+                {renderButtonsContainer()}
             </Box>
-           
-        )
-    }
+        );
+    };
 
-    const renderText = () => {
-        return (<Flex fontWeight={'bold'} fontSize={'2xl'} flexDir={'column'}>
-            <Text>
-                {title}
-            </Text>
-            <Text fontSize={'smaller'}>
-                was introduced
-            </Text> 
+    const renderText = () => (
+        <Flex fontWeight={'bold'} fontSize={'2xl'} flexDir={'column'}>
+            <Text>{title ?? 'Unknown Title'}</Text>
+            <Text fontSize={'smaller'}>was introduced</Text>
             <Flex justifyContent={'center'}>
-            {props?.isLeftCard && renderLeftCardText()}
-            {!props?.isLeftCard && renderRightCardText()}
+                {props.isLeftCard && renderLeftCardText()}
+                {!props.isLeftCard && renderRightCardText()}
             </Flex>
-           
-        </Flex>)
-    }
+        </Flex>
+    );
 
     return (
-
         <Flex
-  justifyContent="center"
-  width={isMobile ? '100vw' :"50vw"}
-  height={isMobile ? "50vh" :'auto'}
-  position={props?.isPreLoadCard ? 'absolute' : "relative"}
-  opacity={props?.isPreLoadCard ? 0 : 1}
-  zIndex={props?.isPreLoadCard ? -1 : 'auto'}
-  
->
-  <div
-    style={{
-      backgroundImage: `url(${image})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-      filter: 'brightness(0.6)', 
-    }}
-  />
-  <Flex
-    style={{
-      position: 'relative',
-      zIndex: 1,
-      color: 'white',
-      marginTop:isMobile ? "5vh" :"30vh"
-      
-    }}
-  >
-        {renderText()}
-
-  </Flex>
-</Flex>
-
+            justifyContent="center"
+            width={isMobile ? '100vw' : '50vw'}
+            height={isMobile ? '50vh' : 'auto'}
+            position={props?.isPreLoadCard ? 'absolute' : 'relative'}
+            opacity={props?.isPreLoadCard ? 0 : 1}
+            zIndex={props?.isPreLoadCard ? -1 : 'auto'}
+        >
+            <div
+                style={{
+                    backgroundImage: `url(${image ?? ''})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    filter: 'brightness(0.6)',
+                }}
+            />
+            <Flex
+                style={{
+                    position: 'relative',
+                    zIndex: 1,
+                    color: 'white',
+                    marginTop: isMobile ? '5vh' : '30vh',
+                }}
+            >
+                {renderText()}
+            </Flex>
+        </Flex>
     );
 }
 
