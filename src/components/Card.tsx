@@ -39,7 +39,23 @@ function Card(props: CardProps) {
         }
     }, [renderCardAnswer]);
 
-    const { title, image, patch } = props?.card || {}; // Added fallback to an empty object
+    const { title, image, patch, date } = props?.card || {}; // Added fallback to an empty object
+
+    function formatDateForUser(dateString?: string): string {
+        if(!dateString){
+            return ''
+        }
+        const date = new Date(dateString);
+      
+        // Format the date to "Month Day, Year"
+        const options: Intl.DateTimeFormatOptions = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+      
+        return date.toLocaleDateString("en-US", options);
+      }      
 
     const handleAnswerClick = (
         e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -63,7 +79,7 @@ function Card(props: CardProps) {
 
     const renderLeftCardText = () => (
         <Text fontWeight={'bold'} color={theme.colors.yellow[200]} fontSize={isMobile ? '5xl' : '8xl'}>
-            {patch}
+            {formatDateForUser(date)}
         </Text>
     );
 
@@ -101,9 +117,7 @@ function Card(props: CardProps) {
                     pointerEvents: renderCardAnswer ? 'none' : 'auto',
                 }}
             >
-                {renderButton('After', (e) => {
-                    console.log(props?.correctAnswer, props);
-                    
+                {renderButton('After', (e) => {                    
                     return handleAnswerClick(e, props.correctAnswer === CardAnswer.AFTER, props.correctAnswer === CardAnswer.SAME)
                 }
                 )}
@@ -124,7 +138,7 @@ function Card(props: CardProps) {
                 gap="12px"
             >
                 <Text color={theme.colors.yellow[100]} fontSize={isMobile ? '5xl' : '8xl'}>
-                    {patch}
+                    {formatDateForUser(date)}
                 </Text>
             </Flex>
         );
