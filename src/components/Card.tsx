@@ -78,7 +78,7 @@ function Card(props: CardProps) {
     };
 
     const renderLeftCardText = () => (
-        <Text fontWeight={'bold'} color={theme.colors.yellow[200]} fontSize={isMobile ? '5xl' : '8xl'}>
+        <Text fontWeight={'bold'} color={theme.colors.yellow[200]} fontSize={isMobile ? '3xl' : '6xl'}>
             {formatDateForUser(date)}
         </Text>
     );
@@ -137,7 +137,7 @@ function Card(props: CardProps) {
                 flexDir="column"
                 gap="12px"
             >
-                <Text color={theme.colors.yellow[100]} fontSize={isMobile ? '5xl' : '8xl'}>
+                <Text color={theme.colors.yellow[100]} fontSize={isMobile ? '3xl' : '6xl'}>
                     {formatDateForUser(date)}
                 </Text>
             </Flex>
