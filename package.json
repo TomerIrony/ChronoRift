@@ -1,7 +1,7 @@
 {
   "name": "chrono-rift",
   "version": "0.1.0",
-  "homepage": "https://tomerirony.github.io/#",
+  "homepage": "https://tomerirony.github.io/ChronoRift/",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
