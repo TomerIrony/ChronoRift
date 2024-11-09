@@ -95,6 +95,7 @@ function Card(props: CardProps) {
             padding={'25px'}
             size={'lg'}
             onClick={(e) => {
+                e.currentTarget.blur(); // Remove focus after click                  
                 if (callback) callback(e);
             }}
             height={'55px'}
@@ -117,12 +118,13 @@ function Card(props: CardProps) {
                     pointerEvents: renderCardAnswer ? 'none' : 'auto',
                 }}
             >
-                {renderButton('After', (e) => {                    
+                {renderButton('After', (e) => {  
                     return handleAnswerClick(e, props.correctAnswer === CardAnswer.AFTER, props.correctAnswer === CardAnswer.SAME)
                 }
                 )}
-                {renderButton('Before', (e) =>
-                    handleAnswerClick(e, props.correctAnswer === CardAnswer.BEFORE, props.correctAnswer === CardAnswer.SAME)
+                {renderButton('Before', (e) => {
+                    return handleAnswerClick(e, props.correctAnswer === CardAnswer.BEFORE, props.correctAnswer === CardAnswer.SAME)
+                }
                 )}
             </Flex>
         );

@@ -1,5 +1,5 @@
 import { useMediaQuery, Flex, ChakraProvider, theme } from "@chakra-ui/react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import Card, { CardAnswer } from "../components/Card"
 import FailScreen from "../components/FailScreen"
 import MidCircle from "../components/MidCircle"
@@ -8,12 +8,15 @@ import useMobileDetection from "../hooks/useMobileDetection"
 import { CardType } from "../types/card-types"
 import { GameStatus } from "../types/game-status-types"
 import { Screens } from "../types/screen-types"
-import jsonData from '../data.json'
 import { gradientAnimation } from "../animations/gradientAnimation"
+import { getAllData } from "../services/getAllData"
 
 
 export const Game = () => {
-  const initCards: CardType[] = jsonData
+
+  const allData = useMemo(() => getAllData(), []);
+    
+  const initCards: CardType[] = allData;
 
   // Main State
   const [streak, setStreak] = useState(0)
@@ -28,7 +31,9 @@ export const Game = () => {
 
   // Preload Images and Initialize Cards
   useEffect(() => {
-    const shuffledCards = shuffleArray(initCards)
+    const shuffledCards = shuffleArray(initCards);
+    console.log(shuffledCards);
+    
 
     // Preload images and only set the cards that successfully load
     const preloadImages = async () => {
@@ -81,8 +86,58 @@ export const Game = () => {
     });
   }
 
+
+  const reorganizeByIncreasingDifficulty = (cards: CardType[]): CardType[] => {
+    // Step 1: Shuffle the cards to randomize initial order
+    const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
+  
+    // Step 2: Set difficulty parameters
+    let closeGap = 30 * 24 * 60 * 60 * 1000; // Start with a 1-month gap for close questions
+    const minCloseGap = 14 * 24 * 60 * 60 * 1000; // Minimum 2 weeks gap
+    const farGap = 365 * 24 * 60 * 60 * 1000;  // A larger range (1 year) for variety
+  
+    // Step 3: Initialize the first card as the starting point
+    const result: CardType[] = [shuffledCards[0]];
+    let lastDate = shuffledCards[0].date ? new Date(shuffledCards[0].date) : new Date();
+  
+    // Step 4: Select each subsequent card based on increasing difficulty
+    for (let i = 1; i < shuffledCards.length; i++) {
+      // Alternate between close and far gaps
+      const isCloseQuestion = i % 2 === 0;
+  
+      // Filter shuffled cards for a range based on the current difficulty
+      const nextOptions = shuffledCards.filter(card => {
+        if (!card.date || result.includes(card)) return false;
+        const cardDate = new Date(card.date).getTime();
+        const dateDiff = Math.abs(cardDate - lastDate.getTime());
+        return isCloseQuestion
+          ? dateDiff <= closeGap && dateDiff >= minCloseGap
+          : dateDiff <= farGap;
+      });
+  
+      // Randomly pick one from available options, or fallback to any unused card
+      let nextCard: CardType;
+      if (nextOptions.length > 0) {
+        nextCard = nextOptions[Math.floor(Math.random() * nextOptions.length)];
+      } else {
+        nextCard = shuffledCards.find(card => !result.includes(card))!;
+      }
+  
+      // Add selected card to result and update last date
+      result.push(nextCard);
+      lastDate = new Date(nextCard.date!);
+  
+      // Gradually tighten the close gap for difficulty
+      closeGap = Math.max(closeGap * 0.9, minCloseGap);
+    }
+  
+    return result;
+  };
+  
+  
   // Shuffle Array Function
-  function shuffleArray<T>(array: T[]): T[] {
+  function shuffleArray<T>(array: CardType[]): CardType[] {
+    
     const shuffledArray = [...array]
     let currentIndex = shuffledArray.length
     while (currentIndex !== 0) {
@@ -93,7 +148,7 @@ export const Game = () => {
         shuffledArray[currentIndex],
       ]
     }
-    return shuffledArray
+    return reorganizeByIncreasingDifficulty(shuffledArray)
   }
 
   // Play Again Handler
